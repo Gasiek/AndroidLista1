@@ -117,8 +117,7 @@ class MainActivity : AppCompatActivity() {
                         putString("savedDate", getCurrentDate())
                         putString("savedBmi", bmi.toString())
                     }.apply()
-                    DataManager.addLogToHistory(historyLog)//musze zalogowac do data managera
-                    DataManager.saveData(applicationContext)
+                    DataManager.addLogToHistory(historyLog)
                 }
             }
             when {

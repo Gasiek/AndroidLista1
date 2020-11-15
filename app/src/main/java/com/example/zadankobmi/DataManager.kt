@@ -22,14 +22,4 @@ object DataManager {
         bmiHistory = ArrayList<HistoryRecord>()
     }
 
-    fun saveData(applicationContext: Context){
-        val database =
-            applicationContext.getSharedPreferences("bmi_history", Context.MODE_PRIVATE)
-        database.edit().apply {
-            putString("savedWeight", mass.toString())
-            putString("savedHeight", height.toString())
-            putString("savedDate", getCurrentDate())
-            putString("savedBmi", bmi.toString())
-        }.apply()
-    }
 }
