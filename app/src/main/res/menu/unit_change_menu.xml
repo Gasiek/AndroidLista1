@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/kg"
+        android:icon="@drawable/menu_icon"
+        android:title="@string/kilograms"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/lb"
+        android:icon="@drawable/menu_icon"
+        android:title="@string/inches"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/history_option"
+        android:icon="@drawable/menu_icon"
+        android:title="@string/history"
+        app:showAsAction="never"/>
+</menu>

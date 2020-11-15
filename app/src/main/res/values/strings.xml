@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">ZadankoBMI</string>
+    <string name="mass_kg">Mass [kg]:</string>
+    <string name="mass_lb">Mass [lb]:</string>
+    <string name="count_bmi">Count BMI</string>
+    <string name="empty_value">0.00</string>
+    <string name="height_is_empty">Please provide value.</string>
+    <string name="mass_is_empty">Please provide value.</string>
+    <string name="height_cm">Height [cm]:</string>
+    <string name="height_in">Height [in]:</string>
+    <string name="kilograms">kg/cm</string>
+    <string name="inches">lb/in</string>
+    <string name="title_activity_bmi_info">bmiInfo</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="go_back">Go Back</string>
+    <string name="history">History</string>
+    <string name="back">Back</string>
+    <string name="skinny">You are kinda weak. Eat some meat</string>
+    <string name="good_diet">Your diet is perfect.  Tell me how?</string>
+    <string name="fat">You haven\'t been to the gym lately. Maybe go and grab some veggies next time</string>
+    <string name="sBmiTitle">Your BMI</string>
+</resources>
