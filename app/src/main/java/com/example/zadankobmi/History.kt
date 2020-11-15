@@ -9,8 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class History: AppCompatActivity() {
-    lateinit var history:ArrayList<HistoryRecord>
+class History : AppCompatActivity() {
+    lateinit var history: ArrayList<HistoryRecord>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -20,14 +20,11 @@ class BmiInfo : AppCompatActivity() {
         showComment(prevBmi.text.toString().toDouble())
     }
 
-    // "Send text back" button click
     fun back(view: View) {
 
-        // Get the text from the EditText
         val prevBmi = findViewById<TextView>(R.id.prevBmi)
         val stringToPassBack = prevBmi.text.toString()
 
-        // Put the String to pass back into an Intent and close this activity
         val intent = Intent()
         intent.putExtra("bmi", stringToPassBack)
         setResult(Activity.RESULT_OK, intent)

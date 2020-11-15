@@ -19,10 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
 
-    private val SECOND_ACTIVITY_REQUEST_CODE = 0
-
     var isKilograms: Boolean = true
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,7 +70,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
-        //TODO oprogramowac zapamietywanie stanu ui (tam gdzie potrzeba)
         binding.apply {
             outState.run {
                 putString("massET", massET.text.toString())
@@ -85,7 +81,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        //TODO odt. stanu
         binding.apply {
             massET.setText(savedInstanceState.getString("massET"))
             heightET.setText(savedInstanceState.getString("heightET"))
@@ -111,13 +106,8 @@ class MainActivity : AppCompatActivity() {
                     val historyLog = HistoryRecord(bmi, mass, height, getCurrentDate(), isKilograms)
                     val database =
                         applicationContext.getSharedPreferences("bmi_history", Context.MODE_PRIVATE)
-                    database.edit().apply {
-                        putString("savedWeight", mass.toString())
-                        putString("savedHeight", height.toString())
-                        putString("savedDate", getCurrentDate())
-                        putString("savedBmi", bmi.toString())
-                    }.apply()
                     DataManager.addLogToHistory(historyLog)
+                    DataManager.saveData(applicationContext)
                 }
             }
             when {
@@ -141,7 +131,7 @@ class MainActivity : AppCompatActivity() {
         return dateFormatter.format(today)
     }
 
-    fun Double.roundTo(n : Int) : Double {
+    fun Double.roundTo(n: Int): Double {
         return "%.${n}f".format(this).toDouble()
     }
 

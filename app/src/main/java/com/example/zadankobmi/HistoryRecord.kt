@@ -1,15 +1,21 @@
 package com.example.zadankobmi
 
-data class HistoryRecord(var bmi: Double, var mass:Double, var height: Double, var date: String, var isKg:Boolean){
+data class HistoryRecord(
+    var bmi: Double,
+    var mass: Double,
+    var height: Double,
+    var date: String,
+    var isKg: Boolean
+) {
 
-    fun getHistoryItemPart1():String{
+    fun getHistoryItemPart1(): String {
         return "Bmi: $bmi; Date: $date"
     }
 
-    fun getHistoryItemPart2():String{
+    fun getHistoryItemPart2(): String {
         var massUnit = "kg"
         var heightUnit = "cm"
-        if(!isKg){
+        if (!isKg) {
             massUnit = "lbs"
             heightUnit = "in"
         }
